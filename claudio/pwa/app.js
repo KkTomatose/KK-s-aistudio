@@ -138,7 +138,7 @@ async function fetchLyricsForTrack(track) {
     if (items.length === 0) return;
     lyricContainer = document.createElement('div');
     lyricContainer.id = 'lyric-overlay';
-    lyricContainer.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:100;background:transparent;padding:40px 20px 24px;max-height:220px;overflow-y:scroll;pointer-events:auto;text-align:center';
+    lyricContainer.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:100;background:transparent;padding:40px 20px 24px;max-height:220px;overflow-y:scroll;pointer-events:none;text-align:center';
     lyricContainer.innerHTML = items.map((it, i) => `<div class="lyric-line" data-time="${it.time}" style="padding:2px 0;font-size:13px;color:rgba(255,255,255,.4);text-align:center" id="lr-${i}">${it.text}</div>`).join('');
     document.body.appendChild(lyricContainer);
     lyricTimes = items.map(it => it.time);
