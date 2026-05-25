@@ -1,0 +1,33 @@
+# Sensitive files
+.env
+*.env
+!claudio/.env.example
+
+# Cache
+cache/
+*.mp3
+!zhoujielun.mp3
+
+# QR login
+qr.png
+
+# TTS cache
+claudio/cache/tts/
+
+# Google Calendar
+credentials.json
+token.json
+
+# Node
+node_modules/
+
+# IDE
+.claude/
+
+# User data (contains personal IDs)
+claudio/user/playlists.json
+
+# System
+.DS_Store
+Thumbs.db
+*.log

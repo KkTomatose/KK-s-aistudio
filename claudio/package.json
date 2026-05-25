@@ -1,0 +1,37 @@
+{
+  "name": "claudio",
+  "version": "0.1.0",
+  "description": "Claudio - Private AI Radio Station",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "ncm": "node node_modules/NeteaseCloudMusicApi/app.js",
+    "start:all": "concurrently -n ncm,claudio -c yellow,cyan \"npm run ncm\" \"npm run dev\"",
+    "pack:zip": "node scripts/pack.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.2",
+  "dependencies": {
+    "NeteaseCloudMusicApi": "^4.31.0",
+    "better-sqlite3": "^12.9.0",
+    "concurrently": "^9.2.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "googleapis": "^171.4.0",
+    "node-schedule": "^2.1.1",
+    "node-ssdp": "^4.0.1",
+    "ws": "^8.20.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
+  }
+}
